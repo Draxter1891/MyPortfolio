@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "1bEi4mkguw3cXAZNf",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div id="cursor"></div>
+      <div id="cursor-blur"></div>
+      <!-- Sticky Navbar with Hamburger -->
+      <nav>
+        <h2>Rishabh <br />Tripathi.</h2>
+
+        <div class="nav-buttons">
+          <a href="#about">AboutMe</a>
+          <a href="#projects">myProjects</a>
+          <a href="#contact">Contactme</a>
+        </div>
+
+        <div class="left-nav">R</div>
+      </nav>
+
+      <div class="page1">
+        <div class="page1-p1">
+          <div class="heading">
+            <h1>Software</h1>
+            <h2>Engineer.</h2>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/Draxter1891" target="_top">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/tripathi-rishabh" target="_top">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="page1-p2">
+          <div class="left-pg1-p2">
+            <a href="https://drive.google.com/file/d/1h4aXtZNJFUP2t6RZVqs4JBTaTXyOElXb/view?usp=sharing" target="_blank">Download Resume
+              <i class="fa-solid fa-file-arrow-down"></i>
+            </a>
+          </div>
+          <h5>Mobile | Web developer</h5>
+          <div class="right-pg1-p2">
+            <img src="./assets/image/code.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Background -->
+      <!-- <div class="video-bg">
+      <video autoplay loop muted playsinline>
+        <source src="./video/1st.mp4" type="video/mp4" />
+      </video>
+    </div> -->
+
+      <!-- Hero Section with Buttons -->
+      <section id="hero" class="blur-section">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Go through these links to know more about me.</p>
+        <div class="button-container">
+          <a href="https://github.com/Draxter1891" target="_blank" class="btn">
+            <img
+              src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+              alt="GitHub"
+            />
+            GitHub
+          </a>
+
+          <a
+            href="https://linkedin.com/in/tripathi-rishabh"
+            target="_blank"
+            class="btn"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=85348&format=png"
+              alt="LinkedIn"
+            />
+            LinkedIn
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/1h4aXtZNJFUP2t6RZVqs4JBTaTXyOElXb/view?usp=sharing"
+            target="_blank"
+            class="btn"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=sXUnPq4XYR1D&format=png"
+              alt="Resume"
+            />
+            Resume
+          </a>
+        </div>
+      </section>
+
+      <!-- ABOUT ME -->
+      <section id="about" class="blur-section">
+        <h2>About Me</h2>
+        <p>
+          I’m a passionate developer who loves building things that make life
+          easier and more efficient. With a strong foundation in full-stack
+          development, I enjoy working with languages and frameworks like C++,
+          JavaScript, React Native, and Node.js. I’m especially drawn to
+          creating seamless, user-friendly applications that solve real
+          problems.
+        </p>
+        <p>
+          I’ve worked on projects like a fully functional e-commerce app and a
+          food recipe website, where I got to integrate APIs, databases, and
+          front-end frameworks to bring ideas to life. I’m always eager to
+          learn, experiment with new technologies, and take on challenges that
+          push me to grow as a developer.
+        </p>
+        <p>
+          At the core, I believe in writing clean, efficient code and constantly
+          improving my skills. Whether it’s developing mobile apps or dynamic
+          web platforms, I’m excited about building innovative solutions and
+          making an impact through technology.
+        </p>
+      </section>
+
+      <!-- SKILLS -->
+      <!-- <section id="skills" class="blur-section"></section> -->
+
+      <!-- PROJECTS -->
+      <section id="projects" class="blur-section">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+          <div class="projects-wrapper">
+            <div class="project">
+              <img
+                src="./assets//image/diagnosis.png"
+                alt=""
+                class="project-img"
+              />
+              <div class="project-text">
+                <h3 class="pHeading">Diagnosis Webapp</h3>
+                <p class="pDesc">
+                  Full-stack Ai-driven website that gives curated treatment plan
+                  for Diseases.
+                </p>
+                <div class="links">
+                  <a
+                    href="https://github.com/Draxter1891/diagnosis-webapp"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                      alt="GitHub"
+                      title="Repository-link"
+                    />
+                  </a>
+                  <a
+                    href="https://diagnosis-webapp.vercel.app/"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=59876&format=png&color=000000"
+                      alt="hosted-link"
+                      title="Deployment-link"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project">
+              <img
+                src="./assets//image/MernElearning.png"
+                alt=""
+                class="project-img"
+              />
+              <div class="project-text">
+                <h3 class="pHeading">MernElearning</h3>
+                <p class="pDesc">
+                  Full-stack LMS WEBSITE, using: MERN, enriched with best UI/UX.
+                </p>
+                <div class="links">
+                  <a
+                    href="https://github.com/Draxter1891/MERN-ELearning"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                      alt="GitHub"
+                      title="Repository-link"
+                    />
+                  </a>
+                  <a
+                    href="https://mern-e-learning-gamma.vercel.app/"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=59876&format=png&color=000000"
+                      alt="hosted-link"
+                      title="Deployment-link"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project">
+              <img
+                src="./assets//image/ecommerceServer.webp"
+                alt=""
+                class="project-img"
+              />
+
+              <div class="project-text">
+                <h3 class="pHeading">E Commerce App Server</h3>
+                <p class="pDesc">
+                  An E-Commerce server thats been made using NODEJS, MONGODB,
+                  EXPRESS, and latest technologies. Hosted on Render.
+                </p>
+                <div class="links">
+                  <a
+                    href="https://github.com/Draxter1891/Ecommerce-APP-RN"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                      alt="GitHub"
+                      title="Repository-link"
+                    />
+                  </a>
+                  <a
+                    href="https://ecommerce-app-rn.onrender.com/"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=59876&format=png&color=000000"
+                      alt="hosted-link"
+                      title="Deployment-link"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project">
+              <img
+                src="./assets//image/Airlink.webp"
+                alt=""
+                class="project-img"
+              />
+
+              <div class="project-text">
+                <h3 class="pHeading">Airlink-UI</h3>
+                <p class="pDesc">
+                  This is a frontend mobile application made using React Native.
+                </p>
+                <div class="links">
+                  <a
+                    href="https://github.com/Draxter1891/File-Sharing-App"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                      alt="GitHub"
+                      title="Repository-link"
+                    />
+                  </a>
+
+                  <a
+                    href="https://drive.google.com/file/d/154wsNBFex2YTxPS199icQm66JbvTDJT7/view?usp=sharing"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=2586&format=png&color=000000"
+                      alt="apk-image"
+                      title="APK Download"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project">
+              <img
+                src="./assets//image/Recipewebapp.webp"
+                alt=""
+                class="project-img"
+              />
+
+              <div class="project-text">
+                <h3 class="pHeading">Recipe Website</h3>
+                <p class="pDesc">
+                  An interactive dynamic website that serves you the list of
+                  dishes recipe based on ingridients you have.
+                </p>
+                <div class="links">
+                  <a
+                    href="https://github.com/Draxter1891/Food-Recipe-Website"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                      alt="GitHub"
+                      title="Repository-link"
+                    />
+                  </a>
+                  <a
+                    href="https://draxter1891.github.io/Food-Recipe-Website/"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                      alt="hosted-link"
+                      title="Deployment-link"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project">
+              <img src="./assets//image/todo.webp" alt="" class="project-img" />
+
+              <div class="project-text">
+                <h3 class="pHeading">Mark It Done</h3>
+                <p class="pDesc">
+                  A TO-DO website, made purely using HTML, CSS, and JS.
+                </p>
+                <div class="links">
+                  <a
+                    href="https://github.com/Draxter1891/Mark-it-Done"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                      alt="GitHub"
+                      title="Repository-link"
+                    />
+                  </a>
+                  <a
+                    href="https://draxter1891.github.io/Mark-it-Done/"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                      alt="hosted-link"
+                      title="Deployment-link"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project">
+              <img
+                src="./assets//image/Calculator.png"
+                alt=""
+                class="project-img"
+              />
+
+              <div class="project-text">
+                <h3 class="pHeading">3D Calculator</h3>
+                <p class="pDesc">
+                  An eye catching Calculator that has amazing animations and UI.
+                </p>
+                <div class="links">
+                  <a
+                    href="https://github.com/Draxter1891/Calculator-App"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                      alt="GitHub"
+                      title="Repository-link"
+                    />
+                  </a>
+                  <a
+                    href="https://draxter1891.github.io/Calculator-App/"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                      alt="hosted-link"
+                      title="Deployment-link"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="project">
+            <img
+              src="./assets//image/MernElearning.png"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">MernElearning</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+               <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./assets//image/MernElearning.png"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">MernElearning</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+               <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./assets//image/MernElearning.png"
+              alt=""
+              class="project-img"
+            />
+
+            <div class="project-text">
+              <h3 class="pHeading">MernElearning</h3>
+              <p class="pDesc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquid fuga nesciunt est...
+              </p>
+              <div class="links">
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
+                    alt="GitHub" title="Repository-link"
+                  />
+                </a>
+                <a href="" target="_blank">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=80410&format=png&color=000000"
+                    alt="hosted-link" title="Deployment-link"
+                  />
+                </a>
+              </div>
+              
+            </div>
+          </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES -->
+      <!-- <section id="certs" class="blur-section">
+      <div class="certs-container">
+        <div class="certs-wrapper">
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+              style="height: 12px"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+            />
+          </div>
+          <div class="cert">
+            <img
+              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
+              alt="certificates"
+              style="width: 100%; height: auto; object-fit: cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+      <!-- CONTACT ME -->
+      <section id="contact" class="blur-section">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" />
+          <input type="email" id="email" placeholder="Your Email" />
+          <textarea id="message" placeholder="Your Message"></textarea>
+          <button type="submit" id="submit-btn">Send</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

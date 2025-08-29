@@ -1,0 +1,583 @@
+@font-face {
+  font-family: "monti";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: monti;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+*::selection {
+  background-color: white;
+  color: #95c11e;
+}
+body::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+  background-color: #95c11e;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+
+.main{
+  width: 100%;
+  position: relative;
+}
+
+#cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #95c11e;
+  border-radius: 50%;
+  position: fixed;
+  transition: all ease 0.1s;
+  z-index: 99;
+  pointer-events: none;
+}
+#cursor-blur {
+  height: 400px;
+  width: 400px;
+  background-color: #b6e92838;
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(100px);
+  transition: all linear 0.4s;
+  z-index: 13;
+  pointer-events: none;
+}
+/* Background Video */
+/* .video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -4;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1.2);
+} */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  padding: 0 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  border-bottom: 1px solid rgba(92, 90, 90, 0.493);
+  z-index: 12;
+}
+nav h2{
+  padding: 10px 0;
+  font-size: 2vmax;
+  font-weight: 900;
+  height: fit-content;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.nav-buttons a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5vmax;
+  font-weight: 600;
+}
+.left-nav{
+  background-color: white;
+  width: 2.5vmax;
+  height: 2.5vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(54, 54, 54);
+
+}
+
+.page1 {
+  position: relative;
+  height: 88vh;
+  margin-top: 12vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.page1-p1{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  justify-content: space-between;
+}
+.heading h1 {
+  color: white;
+  margin-top: 6vmax;
+  font-size: 7vmax;
+  margin-left: 6vw;
+  opacity: 0.8;
+  text-transform: uppercase;
+  position: relative;
+}
+.heading h1::before{
+  content: "SOFTWARE";
+  position: absolute;
+  top: -4px;
+  left:-4px;
+  z-index: -1;
+  -webkit-text-stroke: 1.5px #95c11e;
+  color: #000;
+
+}
+.heading h2 {
+  background-color: white;
+  color: #95c11e;
+  font-size: 7vmax;
+  text-transform: uppercase;
+  margin-left: 30vw;
+  opacity: 0.8;
+  position: relative;
+}
+/* .heading h2::before{
+  content: "ENGINEER";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  z-index: -1;
+  -webkit-text-stroke: 2px #111;
+  color: transparent;
+
+} */
+
+.social-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  right: 0;
+  top:20%;
+  position: absolute;
+  width: fit-content;
+  height: 10vmax;
+  background-color: #6441a5;
+  padding: 20px 12px;
+}
+
+.social-links i{
+  font-size: 2.5vmax;
+  cursor: pointer;
+}
+
+.page1-p2{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2%;
+  justify-content: space-between;
+  
+}
+.left-pg1-p2{
+  height: 20%;
+  width: fit-content;
+  /* background-color: red; */
+  padding: 1% 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-pg1-p2 a{
+  font-size: 1.3vmax;
+  border-bottom: 1px solid #95c11e;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+.left-pg1-p2 i{
+  /* display: none; */
+  font-size: 1.6vmax;
+  margin-left: 5px;
+  transition: all ease 1s;
+  
+}
+.left-pg1-p2 a:hover i{
+  scale:1.2;
+}
+
+.page1-p2 h5{
+  color: #95c11e;
+  font-size: 2vw;
+  font-weight: 500;
+}
+.right-pg1-p2 {
+  display: flex;
+  height: 10vmax;
+  width: 10vmax;
+  padding: 1% 10%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.right-pg1-p2::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  filter: blur(80px);   
+  z-index: 0;           
+}
+
+.right-pg1-p2 img {
+  height: 10vmax;
+  position: relative;
+  z-index: 1;           
+}
+
+/* Blur Effect for Sections */
+.blur-section {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 50px 5%;
+  border-radius: 15px;
+  margin: 50px auto;
+  max-width: 85%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+/* Improve Text Visibility */
+.blur-section > h2,
+.blur-section > p {
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Buttons for GitHub, LinkedIn, and Resume */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #6441a5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #472d7b; /* Darker Purple */
+}
+
+/* Button Icons */
+.btn img {
+  width: 24px;
+  height: 24px;
+  -webkit-user-drag: none;
+}
+
+/* Project Section */
+.projects-container {
+  overflow-x: auto;
+  padding: 2rem;
+  scrollbar-width: none;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-wrapper {
+  display: flex;
+  gap: 2%;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: max-content;
+  padding-bottom: 1rem;
+}
+
+.projects-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-wrapper:active {
+  cursor: grabbing;
+}
+
+.project {
+  width: 40%;
+  min-width: 250px;
+  height: 30vw;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2%;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: rgb(129, 47, 184);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  max-width: 90%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  -webkit-user-drag: none;
+}
+
+.project-text {
+  margin-top: 12%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  user-select: none;
+}
+
+.project-text h3 {
+  font-size: 1.3vw;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  /* text-align: center; */
+}
+
+
+.project-text p {
+  font-size: 1vw;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+
+.pHeading,.pDesc{
+  color: #111111de;
+}
+.project-text img {
+  margin-left: 0.8rem;
+  width: 2.5rem;
+  -webkit-user-drag: none;
+}
+
+/* Certificate Section */
+.certs-container {
+  overflow: hidden;
+  padding: 20px;
+}
+
+.certs-wrapper {
+  display: flex;
+  white-space: nowrap;
+  transition: transform 0.5s ease;
+}
+
+.cert {
+  width: 30%;
+  height: 18em;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+}
+
+/* Contact Section */
+#contact {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#contact form {
+  max-width: 500px;
+  margin: auto;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+}
+
+#contact button {
+  background: white;
+  color: #4b0082;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background: #ddd;
+}
+
+/* Ensure Scrollability on Mobile */
+@media (max-width: 768px) {
+  body,
+  html {
+    overflow-y: auto;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em 2em;
+  }
+  header .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    margin-right: 1.5em;
+  }
+  /* Hide Navigation */
+  header .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(194, 159, 218, 0.9);
+    text-align: center;
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  header .nav.active {
+    display: flex;
+  }
+
+  .blur-section {
+    padding: 30px 3%;
+    margin: 30px auto;
+    max-width: 90%;
+  }
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects-container {
+    padding: 1rem;
+    height: 30rem;
+  }
+
+  .projects-wrapper {
+    gap: 5%;
+  }
+
+  .project {
+    width: 50%; /* Takes most of the screen width */
+    height: 80%; /* Adjust height dynamically */
+  }
+
+  .project-img {
+    margin-top: 2rem;
+    width: auto;
+    height: 100%;
+    max-height: 150px;
+  }
+  .project-text {
+    width: 90%; /* Responsive text width */
+    flex: 1; /* Pushes text below image */
+    flex-direction: column;
+  }
+  .project-text h3 {
+    font-size: 4vw;
+  }
+
+  .project-text p {
+    font-size: 3vw;
+  }
+  .project-text img {
+    width: 1.2rem;
+  }
+
+  .cert {
+    width: 45%;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert {
+    width: 80%;
+    margin-right: 10px;
+  }
+}

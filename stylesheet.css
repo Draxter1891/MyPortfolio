@@ -62,22 +62,6 @@ body::-webkit-scrollbar-thumb {
   z-index: 13;
   pointer-events: none;
 }
-/* Background Video */
-/* .video-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -4;
-}
-
-.video-bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.7) contrast(1.2);
-} */
 
 nav {
   position: fixed;
@@ -113,7 +97,6 @@ nav h2 {
   font-weight: 600;
 }
 .left-nav {
-  background-color: white;
   width: 2.5vmax;
   height: 2.5vmax;
   display: flex;
@@ -259,7 +242,7 @@ nav h2 {
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #a077ec;
   filter: blur(80px);
   z-index: 0;
 }
@@ -480,47 +463,79 @@ nav h2 {
 }
 
 /* Ensure Scrollability on Mobile */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   body,
   html {
     overflow-y: auto;
   }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 1em 2em;
-  }
-  header .hamburger {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-    margin-right: 1.5em;
-  }
-  /* Hide Navigation */
-  header .nav {
+  body::-webkit-scrollbar {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: rgba(194, 159, 218, 0.9);
-    text-align: center;
-    padding: 10px 0;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease-in-out;
   }
 
-  header .nav.active {
+  #cursor {
+    display: none;
+  }
+  #cursor-blur {
+    display: none;
+  }
+
+  nav {
+    padding: 3vw 5vw;
+    height: 7vh;
+  }
+  nav h2 {
+    margin-right: 3vw;
+  }
+  .nav-buttons {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+  }
+  .nav-buttons a {
+    font-size: 2.8vw;
+  }
+  .left-nav {
+    display: none;
   }
 
+  .page1-p1 {
+    flex-direction: column;
+  }
+  .heading h2 {
+    margin-top: 5vw;
+    margin-left: 12vw;
+  }
+  .social-links {
+    position: absolute;
+    top: 70%;
+    left: calc(50vw - 68px);
+    margin-top: 20%;
+    align-self: center;
+    flex-direction: row;
+    border-radius: 10px;
+    padding: 12px 30px;
+  }
+  .page1-p2 {
+    flex-direction: column;
+  }
+  .left-pg1-p2 {
+    height: 30vh;
+  }
+  .right-pg1-p2 {
+    margin-bottom: 20%;
+  }
+  .right-pg1-p2::before {
+    filter: blur(50px);
+  }
+  .left-pg1-p2 a {
+    font-size: 4vw;
+  }
+
+  .page1-p2 h5 {
+    display: none;
+  }
   .blur-section {
     padding: 30px 3%;
     margin: 30px auto;
@@ -566,13 +581,6 @@ nav h2 {
     width: 1.2rem;
   }
 
-  .cert {
-    width: 45%;
-    margin-right: 10px;
-  }
-}
-
-@media (max-width: 480px) {
   .cert {
     width: 80%;
     margin-right: 10px;

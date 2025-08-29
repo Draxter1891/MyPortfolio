@@ -127,7 +127,7 @@ nav h2 {
 .heading h1 {
   color: white;
   margin-top: 6vmax;
-  font-size: 7vmax;
+  font-size: 7vw;
   margin-left: 6vw;
   opacity: 0.8;
   text-transform: uppercase;
@@ -145,9 +145,9 @@ nav h2 {
 .heading h2 {
   background-color: white;
   color: #95c11e;
-  font-size: 7vmax;
+  font-size: 7vw;
   text-transform: uppercase;
-  margin-left: 30vw;
+  margin-left: 25vw;
   opacity: 0.8;
   position: relative;
 }
@@ -169,7 +169,7 @@ nav h2 {
   align-items: center;
   gap: 20px;
   right: 0;
-  top: 20%;
+  top: 60%;
   position: absolute;
   width: fit-content;
   height: fit-content;
@@ -202,7 +202,7 @@ nav h2 {
 }
 
 .left-pg1-p2 a {
-  font-size: 1.3vmax;
+  font-size: 1vmax;
   border-bottom: 1px solid #95c11e;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;

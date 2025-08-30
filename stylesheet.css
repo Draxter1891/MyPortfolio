@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "monti";
-  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+  font-family: ppmori;
+  src: url("./assets/fonts/ppmori.ttf");
 }
 
 * {
@@ -8,7 +8,7 @@
   padding: 0;
   margin: 0;
   color: white;
-  font-family: monti;
+  font-family: ppmori;
 }
 
 html,
@@ -42,12 +42,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 #cursor {
+  display: none;
   height: 20px;
   width: 20px;
   background-color: #95c11e;
   border-radius: 50%;
   position: fixed;
-  transition: all ease 0.1s;
+  transition: all ease-in 0.1s;
   z-index: 99;
   pointer-events: none;
 }
@@ -58,7 +59,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50%;
   position: fixed;
   filter: blur(100px);
-  transition: all linear 0.4s;
+  transition: all ease-in 0.1;
   z-index: 13;
   pointer-events: none;
 }
@@ -93,7 +94,7 @@ nav h2 {
 .nav-buttons a {
   text-decoration: none;
   color: white;
-  font-size: 1.5vmax;
+  font-size: 1.2vmax;
   font-weight: 600;
 }
 .left-nav {
@@ -108,8 +109,8 @@ nav h2 {
 
 .page1 {
   position: relative;
-  height: 88vh;
-  margin-top: 12vh;
+  min-height: 100vh;
+  /* margin-top: 12vh; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -126,7 +127,7 @@ nav h2 {
 }
 .heading h1 {
   color: white;
-  margin-top: 6vmax;
+  margin-top: 6vw;
   font-size: 7vw;
   margin-left: 6vw;
   opacity: 0.8;
@@ -161,6 +162,9 @@ nav h2 {
   color: transparent;
 
 } */
+.heading h3 {
+  display: none;
+}
 
 .social-links {
   display: flex;
@@ -266,12 +270,33 @@ nav h2 {
   color: #ffffff;
 }
 
+.about {
+  background-color: rgba(255, 255, 255, 0.158);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1vw;
+}
+.about h2 {
+  margin-bottom: 2vw;
+  border-bottom: 2px solid black;
+  border-radius: 10px;
+  padding: 0 1.5vw;
+}
+.about p {
+  align-self: center;
+  text-align: justify;
+  line-height: 2vw;
+  padding: 0 8vw;
+  font-size: 1.2vw;
+}
 /* Improve Text Visibility */
-.blur-section > h2,
+/* .blur-section > h2,
 .blur-section > p {
   color: #fff;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-}
+} */
 
 /* Buttons for GitHub, LinkedIn, and Resume */
 .button-container {
@@ -494,24 +519,43 @@ nav h2 {
     gap: 3vw;
   }
   .nav-buttons a {
-    font-size: 2.8vw;
+    font-size: 3vw;
+    font-weight: 100;
   }
   .left-nav {
     display: none;
   }
 
+  .page1 {
+    min-height: 100vh;
+    padding-bottom: 20vw;
+  }
   .page1-p1 {
     flex-direction: column;
+    padding-top: 20vw;
+  }
+  .heading h1 {
+    font-size: 15vw;
   }
   .heading h2 {
     margin-top: 5vw;
     margin-left: 12vw;
+    font-size: 15vw;
+    width: fit-content;
+  }
+  .heading h3 {
+    display: block;
+    margin-top: 10vw;
+    align-self: center;
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 100;
   }
   .social-links {
     position: absolute;
     top: 70%;
     left: calc(50vw - 68px);
-    margin-top: 20%;
+    margin-top: 15%;
     align-self: center;
     flex-direction: row;
     border-radius: 10px;
@@ -536,6 +580,16 @@ nav h2 {
   .page1-p2 h5 {
     display: none;
   }
+
+  .about {
+    gap: 2vw;
+  }
+  .about p {
+    padding: 0 2vw;
+    line-height: 5vw;
+    font-size: 3.2vw;
+    text-align: justify;
+  }
   .blur-section {
     padding: 30px 3%;
     margin: 30px auto;
@@ -545,6 +599,10 @@ nav h2 {
     flex-direction: column;
     align-items: center;
   }
+  /* .about h2 {
+    color: #000;
+  } */
+
   .projects-container {
     padding: 1rem;
     height: 30rem;

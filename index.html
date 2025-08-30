@@ -14,7 +14,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
     <script
       type="text/javascript"
@@ -29,9 +29,9 @@
     </script>
   </head>
   <body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
     <div class="main">
-      <div id="cursor"></div>
-      <div id="cursor-blur"></div>
       <!-- Sticky Navbar with Hamburger -->
       <nav>
         <h2>Rishabh <br />Tripathi.</h2>
@@ -50,6 +50,7 @@
           <div class="heading">
             <h1>Software</h1>
             <h2>Engineer.</h2>
+            <h3>Web | Mobile Developer</h3>
           </div>
           <div class="social-links">
             <a href="https://github.com/Draxter1891" target="_top">
@@ -84,47 +85,8 @@
       </video>
     </div> -->
 
-      <!-- Hero Section with Buttons -->
-      <section id="hero" class="blur-section">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Go through these links to know more about me.</p>
-        <div class="button-container">
-          <a href="https://github.com/Draxter1891" target="_blank" class="btn">
-            <img
-              src="https://img.icons8.com/?size=100&id=ARy6tFUfwclb&format=png"
-              alt="GitHub"
-            />
-            GitHub
-          </a>
-
-          <a
-            href="https://linkedin.com/in/tripathi-rishabh"
-            target="_blank"
-            class="btn"
-          >
-            <img
-              src="https://img.icons8.com/?size=100&id=85348&format=png"
-              alt="LinkedIn"
-            />
-            LinkedIn
-          </a>
-
-          <a
-            href="https://drive.google.com/file/d/1h4aXtZNJFUP2t6RZVqs4JBTaTXyOElXb/view?usp=sharing"
-            target="_blank"
-            class="btn"
-          >
-            <img
-              src="https://img.icons8.com/?size=100&id=sXUnPq4XYR1D&format=png"
-              alt="Resume"
-            />
-            Resume
-          </a>
-        </div>
-      </section>
-
       <!-- ABOUT ME -->
-      <section id="about" class="blur-section">
+      <section id="about" class="blur-section about">
         <h2>About Me</h2>
         <p>
           I’m a passionate developer who loves building things that make life
@@ -605,6 +567,19 @@
       </section>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

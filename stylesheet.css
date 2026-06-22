@@ -1,18 +1,16 @@
 @font-face {
   font-family: ppmori;
-  src: url("./assets/fonts/ppmori.ttf");
+  src: url("https://ik.imagekit.io/udeluwj7a/Portfolio%20Assets/Fonts/ppmori.ttf");
 }
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: white;
+  color: #fff;
   font-family: ppmori;
 }
 
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
 }
@@ -21,9 +19,12 @@ body {
   background-color: #111;
   overflow-x: hidden;
 }
-
-*::selection {
-  background-color: white;
+body::-moz-selection {
+  background-color: #fff;
+  color: #95c11e;
+}
+body::selection {
+  background-color: #fff;
   color: #95c11e;
 }
 body::-webkit-scrollbar {
@@ -52,10 +53,11 @@ body::-webkit-scrollbar-thumb {
   z-index: 99;
   pointer-events: none;
 }
+
 #cursor-blur {
   height: 400px;
   width: 400px;
-  background-color: #b6e92838;
+  background-color: rgba(182, 233, 40, 0.2196078431);
   border-radius: 50%;
   position: fixed;
   filter: blur(100px);
@@ -82,6 +84,7 @@ nav h2 {
   padding: 10px 0;
   font-size: 2vmax;
   font-weight: 900;
+  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -93,16 +96,17 @@ nav h2 {
 }
 .nav-buttons a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-size: 1.2vmax;
   font-weight: 600;
 }
+
 .left-nav {
   width: 2.5vmax;
   height: 2.5vmax;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   border-radius: 50%;
   background-color: rgb(54, 54, 54);
 }
@@ -110,13 +114,11 @@ nav h2 {
 .page1 {
   position: relative;
   min-height: 100vh;
-  /* margin-top: 12vh; */
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-
 .page1-p1 {
   display: flex;
   flex-direction: row;
@@ -125,8 +127,21 @@ nav h2 {
   width: 100%;
   justify-content: space-between;
 }
+.page1-p2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2%;
+  justify-content: space-between;
+}
+.page1-p2 h5 {
+  color: #95c11e;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
 .heading h1 {
-  color: white;
+  color: #fff;
   margin-top: 6vw;
   font-size: 7vw;
   margin-left: 6vw;
@@ -144,7 +159,7 @@ nav h2 {
   color: #000;
 }
 .heading h2 {
-  background-color: white;
+  background-color: #fff;
   color: #95c11e;
   font-size: 7vw;
   text-transform: uppercase;
@@ -152,16 +167,6 @@ nav h2 {
   opacity: 0.8;
   position: relative;
 }
-/* .heading h2::before{
-  content: "ENGINEER";
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  z-index: -1;
-  -webkit-text-stroke: 2px #111;
-  color: transparent;
-
-} */
 .heading h3 {
   display: none;
 }
@@ -175,36 +180,29 @@ nav h2 {
   right: 0;
   top: 60%;
   position: absolute;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   background-color: #3c1a64;
   padding: 20px 12px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-
 .social-links i {
   font-size: 2.5vmax;
   cursor: pointer;
 }
 
-.page1-p2 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 2%;
-  justify-content: space-between;
-}
 .left-pg1-p2 {
   height: 20%;
+  width: -moz-fit-content;
   width: fit-content;
-  /* background-color: red; */
   padding: 1% 2%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .left-pg1-p2 a {
   font-size: 1vmax;
   border-bottom: 1px solid #95c11e;
@@ -215,31 +213,25 @@ nav h2 {
   padding-right: 10px;
   text-decoration: none;
 }
+.left-pg1-p2 a:hover i {
+  scale: 1.2;
+}
 .left-pg1-p2 i {
-  /* display: none; */
   font-size: 1.6vmax;
   margin-left: 5px;
   transition: all ease 1s;
 }
-.left-pg1-p2 a:hover i {
-  scale: 1.2;
-}
 
-.page1-p2 h5 {
-  color: #95c11e;
-  font-size: 2vw;
-  font-weight: 500;
-}
 .right-pg1-p2 {
   display: flex;
   height: 10vmax;
   width: 10vmax;
   padding: 1% 10%;
-  justify-content: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
-
 .right-pg1-p2::before {
   content: "";
   position: absolute;
@@ -250,24 +242,22 @@ nav h2 {
   filter: blur(80px);
   z-index: 0;
 }
-
 .right-pg1-p2 img {
   height: 10vmax;
   position: relative;
   z-index: 1;
 }
 
-/* Blur Effect for Sections */
 .blur-section {
   position: relative;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
-  padding: 50px 5%;
   border-radius: 15px;
+  padding: 50px 5%;
   margin: 50px auto;
   max-width: 85%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  color: #ffffff;
+  color: #fff;
 }
 
 .about {
@@ -291,14 +281,7 @@ nav h2 {
   padding: 0 8vw;
   font-size: 1.2vw;
 }
-/* Improve Text Visibility */
-/* .blur-section > h2,
-.blur-section > p {
-  color: #fff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-} */
 
-/* Buttons for GitHub, LinkedIn, and Resume */
 .button-container {
   display: flex;
   justify-content: center;
@@ -307,32 +290,27 @@ nav h2 {
   margin-top: 20px;
 }
 
-/* Buttons */
 .btn {
   display: flex;
   align-items: center;
   gap: 8px;
   background: #6441a5;
-  color: white;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s ease-in-out;
 }
-
 .btn:hover {
-  background: #472d7b; /* Darker Purple */
+  background: #472d7b;
 }
-
-/* Button Icons */
 .btn img {
   width: 24px;
   height: 24px;
   -webkit-user-drag: none;
 }
 
-/* Project Section */
 .projects-container {
   overflow-x: auto;
   padding: 2rem;
@@ -347,18 +325,19 @@ nav h2 {
   gap: 2%;
   scroll-behavior: smooth;
   cursor: grab;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  width: -moz-max-content;
   width: max-content;
   padding-bottom: 1rem;
 }
-
 .projects-wrapper::-webkit-scrollbar {
   display: none;
 }
-
 .projects-wrapper:active {
   cursor: grabbing;
 }
@@ -383,7 +362,8 @@ nav h2 {
   width: 100%;
   height: auto;
   max-width: 90%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0.5rem;
   margin-bottom: 0.5rem;
   -webkit-user-drag: none;
@@ -398,26 +378,20 @@ nav h2 {
   justify-content: center;
   align-self: center;
   text-align: center;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-
 .project-text h3 {
   font-size: 1.3vw;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  /* text-align: center; */
 }
-
 .project-text p {
   font-size: 1vw;
   word-wrap: break-word;
   overflow-wrap: break-word;
   text-align: justify;
-}
-
-.pHeading,
-.pDesc {
-  color: #111111de;
 }
 .project-text img {
   margin-left: 0.8rem;
@@ -425,7 +399,10 @@ nav h2 {
   -webkit-user-drag: none;
 }
 
-/* Certificate Section */
+.pHeading, .pDesc {
+  color: rgba(17, 17, 17, 0.8705882353);
+}
+
 .certs-container {
   overflow: hidden;
   padding: 20px;
@@ -449,32 +426,27 @@ nav h2 {
   margin-right: 15px;
 }
 
-/* Contact Section */
 #contact {
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(8px);
-  color: white;
+  border-radius: 15px;
+  color: #fff;
   padding: 20px;
   text-align: center;
-  border-radius: 15px;
 }
-
 #contact form {
   max-width: 500px;
   margin: auto;
 }
-
-#contact input,
-#contact textarea {
+#contact input, #contact textarea {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: none;
   border-radius: 10px;
 }
-
 #contact button {
-  background: white;
+  background: #fff;
   color: #4b0082;
   font-weight: bold;
   padding: 10px 20px;
@@ -482,29 +454,20 @@ nav h2 {
   border-radius: 10px;
   cursor: pointer;
 }
-
 #contact button:hover {
   background: #ddd;
 }
 
-/* Ensure Scrollability on Mobile */
 @media (max-width: 600px) {
-  body,
-  html {
+  body, html {
     overflow-y: auto;
   }
-
   body::-webkit-scrollbar {
     display: none;
   }
-
-  #cursor {
+  #cursor, #cursor-blur {
     display: none;
   }
-  #cursor-blur {
-    display: none;
-  }
-
   nav {
     padding: 3vw 5vw;
     height: 7vh;
@@ -513,9 +476,6 @@ nav h2 {
     margin-right: 3vw;
   }
   .nav-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 3vw;
   }
   .nav-buttons a {
@@ -525,7 +485,6 @@ nav h2 {
   .left-nav {
     display: none;
   }
-
   .page1 {
     min-height: 100vh;
     padding-bottom: 20vw;
@@ -534,6 +493,12 @@ nav h2 {
     flex-direction: column;
     padding-top: 20vw;
   }
+  .page1-p2 {
+    flex-direction: column;
+  }
+  .page1-p2 h5 {
+    display: none;
+  }
   .heading h1 {
     font-size: 15vw;
   }
@@ -541,6 +506,7 @@ nav h2 {
     margin-top: 5vw;
     margin-left: 12vw;
     font-size: 15vw;
+    width: -moz-fit-content;
     width: fit-content;
   }
   .heading h3 {
@@ -561,11 +527,11 @@ nav h2 {
     border-radius: 10px;
     padding: 12px 30px;
   }
-  .page1-p2 {
-    flex-direction: column;
-  }
   .left-pg1-p2 {
     height: 30vh;
+  }
+  .left-pg1-p2 a {
+    font-size: 4vw;
   }
   .right-pg1-p2 {
     margin-bottom: 20%;
@@ -573,14 +539,6 @@ nav h2 {
   .right-pg1-p2::before {
     filter: blur(50px);
   }
-  .left-pg1-p2 a {
-    font-size: 4vw;
-  }
-
-  .page1-p2 h5 {
-    display: none;
-  }
-
   .about {
     gap: 2vw;
   }
@@ -599,24 +557,17 @@ nav h2 {
     flex-direction: column;
     align-items: center;
   }
-  /* .about h2 {
-    color: #000;
-  } */
-
   .projects-container {
     padding: 1rem;
     height: 30rem;
   }
-
   .projects-wrapper {
     gap: 5%;
   }
-
   .project {
-    width: 50%; /* Takes most of the screen width */
-    height: 80%; /* Adjust height dynamically */
+    width: 50%;
+    height: 80%;
   }
-
   .project-img {
     margin-top: 2rem;
     width: auto;
@@ -624,23 +575,21 @@ nav h2 {
     max-height: 150px;
   }
   .project-text {
-    width: 90%; /* Responsive text width */
-    flex: 1; /* Pushes text below image */
+    width: 90%;
+    flex: 1;
     flex-direction: column;
   }
   .project-text h3 {
     font-size: 4vw;
   }
-
   .project-text p {
     font-size: 3vw;
   }
   .project-text img {
     width: 1.2rem;
   }
-
   .cert {
     width: 80%;
     margin-right: 10px;
   }
-}
+}/*# sourceMappingURL=stylesheet.css.map */

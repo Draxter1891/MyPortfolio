@@ -1,10 +1,12 @@
 //IIFE: immediately invoked function expression
+
+let locoScroll;
 (function () {
   gsap.registerPlugin(ScrollTrigger);
 
   // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
-  const locoScroll = new LocomotiveScroll({
+  locoScroll = new LocomotiveScroll({
     el: document.querySelector(".main"),
     smooth: true,
   });
@@ -42,15 +44,25 @@
 let cursor = document.querySelector("#cursor");
 let cursorBlur = document.querySelector("#cursor-blur");
 let main = document.querySelector(".main");
-main.addEventListener("mousemove", function (dets) {
-  cursor.style.left = dets.x - 10 + "px";
-  cursor.style.top = dets.y - 10 + "px";
-  cursorBlur.style.left = dets.x - 250 + 30 + "px";
-  cursorBlur.style.top = dets.y - 250 + 30 + "px";
+main.addEventListener("mousemove", function (e) {
+  cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+  cursorBlur.style.transform = `translate(${e.clientX - 230}px, ${e.clientY - 230}px)`;
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("video").playbackRate = 0.5;
+//Nav links optimizations according to scroll trigger
+let navOptions = document.querySelectorAll('a[href^="#"]')
+// console.log(navOptions);
+
+navOptions.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const targetId = link.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });
 
 // Toggle Mobile Menu

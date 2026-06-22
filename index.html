@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
+    <link rel="shortcut icon" href="https://ik.imagekit.io/udeluwj7a/Favicon-R/web-app-manifest-192x192.png?updatedAt=1781857327739" type="image/x-icon">
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -37,9 +38,9 @@
         <h2>Rishabh <br />Tripathi.</h2>
 
         <div class="nav-buttons">
-          <a href="#about">AboutMe</a>
-          <a href="#projects">myProjects</a>
-          <a href="#contact">Contactme</a>
+          <a href="#about" class="nav-link">AboutMe</a>
+          <a href="#projects" class="nav-link">myProjects</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </div>
 
         <div class="left-nav">R</div>
@@ -478,9 +479,9 @@
       <section id="contact" class="blur-section">
         <h2>Contact Me</h2>
         <form id="contact-form">
-          <input type="text" id="name" placeholder="Your Name" />
-          <input type="email" id="email" placeholder="Your Email" />
-          <textarea id="message" placeholder="Your Message"></textarea>
+          <input type="text" id="name" placeholder="Your Name" name="name"/>
+          <input type="email" id="email" placeholder="Your Email" name="email"/>
+          <textarea id="message" placeholder="Your Message" name="message"></textarea>
           <button type="submit" id="submit-btn">Send</button>
         </form>
       </section>

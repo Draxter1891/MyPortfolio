@@ -679,7 +679,7 @@ nav {
 
 #contact {
   @include blur-box(rgba(255, 255, 255, 0.4));
-  color: $white;
+  // color: $white;
   padding: 20px;
   text-align: center;
 
@@ -695,6 +695,7 @@ nav {
     margin: 10px 0;
     border: none;
     border-radius: 10px;
+    color: #000;
   }
 
   button {

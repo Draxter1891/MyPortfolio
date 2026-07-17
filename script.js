@@ -50,11 +50,11 @@ main.addEventListener("mousemove", function (e) {
 });
 
 //Nav links optimizations according to scroll trigger
-let navOptions = document.querySelectorAll('a[href^="#"]')
+let navOptions = document.querySelectorAll('a[href^="#"]');
 // console.log(navOptions);
 
-navOptions.forEach(link => {
-  link.addEventListener("click", e => {
+navOptions.forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
     const targetId = link.getAttribute("href");
     const targetElement = document.querySelector(targetId);
@@ -143,40 +143,46 @@ projectsWrapper.addEventListener("mousemove", (e) => {
 // setInterval(autoScroll, 30); // Adjust scroll speed by changing the interval
 
 // Contact Form Submission
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+document.getElementById("contact-form").addEventListener("submit", (event) => {
+  event.preventDefault();
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("message").value.trim();
+  // 1. Verify the user actually checked the reCAPTCHA box on the frontend
+  // const captchaResponse = grecaptcha.getResponse();
+  // if (captchaResponse.length === 0) {
+  //   alert("Please check the reCAPTCHA checkbox to prove you are human!");
+  //   return; // Stop form submission
+  // }
 
-    if (!name || !email || !message) {
-      alert("Please fill out all fields.");
-      return;
-    }
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let message = document.getElementById("message").value.trim();
 
-    document.getElementById("submit-btn").disabled = true;
+  if (!name || !email || !message) {
+    alert("Please fill out all fields.");
+    return;
+  }
 
-    sendMail();
-  });
+  document.getElementById("submit-btn").disabled = true;
+
+  sendMail();
+});
 
 function sendMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
+  let params = {
+    userName: document.getElementById("name").value,
+    userEmail: document.getElementById("email").value,
     message: document.getElementById("message").value,
   };
 
   emailjs
-    .send("service_r3p6wa2", "template_bgil9qm", params)
+    .send("service_dqhayfl", "template_wfefqe5", params)
     .then(() => {
-      alert("Your message was sent successfully!");
+      alert("Your message was sent successfully🎉");
       document.getElementById("contact-form").reset();
       document.getElementById("submit-btn").disabled = false;
     })
-    .catch(() => {
+    .catch((e) => {
+      console.log(e);
       alert("Something went wrong. Please try again.");
       document.getElementById("submit-btn").disabled = false;
     });

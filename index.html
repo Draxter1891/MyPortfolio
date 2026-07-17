@@ -16,7 +16,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
-    <link rel="shortcut icon" href="https://ik.imagekit.io/udeluwj7a/Favicon-R/web-app-manifest-192x192.png?updatedAt=1781857327739" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="https://ik.imagekit.io/udeluwj7a/Favicon-R/web-app-manifest-192x192.png?updatedAt=1781857327739"
+      type="image/x-icon"
+    />
+    <!-- Google reCaptcha -->
+    <!-- <script src="https://google.com" async defer></script> -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -24,7 +30,18 @@
     <script type="text/javascript">
       (function () {
         emailjs.init({
-          publicKey: "1bEi4mkguw3cXAZNf",
+          publicKey: "43523dnafl3NRgdTa",
+          blockHeadless: true,
+          blockList: {
+            // Block the suspended emails
+            list: ["foo@emailjs.com", "bar@emailjs.com"],
+            // The variable contains the email address
+            watchVariable: "userEmail",
+          },
+          limitRate: {
+            id: "contact_form",
+            throttle: 10000,
+          },
         });
       })();
     </script>
@@ -381,107 +398,24 @@
         </div>
       </section>
 
-      <!-- CERTIFICATES -->
-      <!-- <section id="certs" class="blur-section">
-      <div class="certs-container">
-        <div class="certs-wrapper">
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-              style="height: 12px"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-            />
-          </div>
-          <div class="cert">
-            <img
-              src="https://drive.google.com/uc?id=1pj4B4pmhPqht_gQ8mlmq6dIPvMK10Hi1"
-              alt="certificates"
-              style="width: 100%; height: auto; object-fit: cover"
-            />
-          </div>
-        </div>
-      </div>
-    </section> -->
-
       <!-- CONTACT ME -->
       <section id="contact" class="blur-section">
         <h2>Contact Me</h2>
         <form id="contact-form">
-          <input type="text" id="name" placeholder="Your Name" name="name"/>
-          <input type="email" id="email" placeholder="Your Email" name="email"/>
-          <textarea id="message" placeholder="Your Message" name="message"></textarea>
+          <input type="text" id="name" placeholder="Your Name" name="userName" />
+          <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            name="userEmail"
+          />
+          <textarea
+            id="message"
+            placeholder="Your Message"
+            name="message"
+          ></textarea>
+          <!-- Google reCAPTCHA Checkbox Widget -->
+          <!-- <div class="g-recaptcha" data-sitekey="YOUR_GOOGLE_SITE_KEY"></div> -->
           <button type="submit" id="submit-btn">Send</button>
         </form>
       </section>

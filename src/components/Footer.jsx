@@ -89,6 +89,13 @@ const Footer = () => {
             >
               LinkedIn
             </Link>
+            <Link
+              to={"https://drive.google.com/file/d/1h4aXtZNJFUP2t6RZVqs4JBTaTXyOElXb/view?usp=sharing"}
+              target="_blank"
+              className="transition-opacity duration-300 hover:opacity-60"
+            >
+              Resume
+            </Link>
           </div>
 
 

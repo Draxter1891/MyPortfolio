@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: "robo";
+  src: url("../assets/fonts/cf43eec32acc9b5a-s.p.otf");
+}
+
+@theme {
+  --color-bg-primary: #F1DEC4;
+  --color-bg-secondary: #E8D2B3;
+  --color-text-primary: #344334;
+  --color-text-secondary: #667064;
+  --color-accent: #BD4444;
+  --color-highlight: #73976A;
+  --color-border: #D8C3A6;
+}
+
+@theme {
+  --animate-marquee-left: marquee-left 7s linear infinite;
+  --animate-marquee-right: marquee-right 10s linear infinite;
+
+  @keyframes marquee-left {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-right {
+    from {
+      transform: translateX(-50%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+::selection{
+  background: #7f1f1f;
+  color: #F1DEC4;
+}

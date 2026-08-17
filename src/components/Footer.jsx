@@ -98,10 +98,6 @@ const Footer = () => {
             </Link>
           </div>
 
-
-          <p className="text-xs uppercase tracking-[0.06em] text-[#8F9688] md:text-right">
-            Created by Rishabh Tripathi
-          </p>
         </div>
       </div>
     </footer>

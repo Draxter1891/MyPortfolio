@@ -22,7 +22,7 @@ const About = () => {
 
         <div className="mt-10 grid gap-10 md:mt-28 md:grid-cols-2 md:gap-16">
           <p className="max-w-[55ch] text-xl leading-[1.4] tracking-[-0.02em] md:text-2xl">
-            My foundation is in frontend engineering, where I enjoy turning
+            My foundation is in <span className="bg-accent text-amber-50"> frontend engineering</span> , where I enjoy turning
             designs into responsive, polished web applications. I care about
             the details—from visual hierarchy and motion to performance,
             accessibility, and usability.

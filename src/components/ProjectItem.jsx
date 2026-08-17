@@ -214,7 +214,7 @@ const ProjectItem = ({ project }) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="overflow-hidden bg-bg-secondary">
+          <div className="overflow-hidden bg-bg-secondar rounded-2xl">
             <img
               ref={imageRef}
               src={project.uri}
@@ -222,7 +222,7 @@ const ProjectItem = ({ project }) => {
               className="
                 h-full
                 w-full
-                object-contain
+                object-cover
                 transition-transform
                 duration-700
               "
@@ -246,11 +246,14 @@ const ProjectItem = ({ project }) => {
                 absolute
                 bottom-0
                 left-0
-                translate-y-full
+                md:translate-y-full
                 bg-accent
-                px-6
-                py-4
+                px-4 py-2
+                sm:px-6
+                sm:py-4
                 text-sm
+                rounded-bl-xl
+                rounded-tr-xl
                 font-medium
                 text-bg-primary
                 transition-transform
@@ -268,11 +271,14 @@ const ProjectItem = ({ project }) => {
                 absolute
                 bottom-0
                 right-0
-                translate-y-full
+                md:translate-y-full
                 bg-gray-600
-                px-6
-                py-4
+                px-4 py-2
+                sm:px-6
+                sm:py-4
                 text-sm
+                 rounded-br-xl
+                rounded-tl-xl
                 font-medium
                 text-bg-primary
                 transition-transform

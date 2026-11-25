@@ -19,7 +19,7 @@ const About = () => {
 
         <div className="mt-10 grid gap-10 md:mt-28 md:grid-cols-2 md:gap-16">
           <p className="max-w-[55ch] text-xl leading-[1.4] tracking-[-0.02em] md:text-2xl">
-            End-to-end web development is combined employing the MERN stack (MongoDB, Express, React, Node.js) with strong core engineering fundamentals in Java, Low-Level Design (LLD), and Data Structures & Algorithms, in many respects. And thus, Whether I'm crafting a responsive user interface or structuring modular, maintainable backend logic using SOLID principles, I emphasize on writing code that's both efficient and easy to scale, on the whole.
+            Adjustable end-to-end applications are built employing the MERN stack, backed by strong cores in Java, DSA, and LLD, in many respects, and I emphasize on responsive interfaces, modular backend architecture, SOLID principles, and writing efficient, maintainable code, on the whole.
           </p>
 
           <p className="max-w-[55ch] text-xl leading-[1.4] tracking-[-0.02em] md:text-2xl">

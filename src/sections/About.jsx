@@ -13,26 +13,17 @@ const About = () => {
        
         <div className="mt-24 md:mt-28">
           <p className="max-w-300 text-[clamp(2rem,2.5vw,3rem)] font-normal leading-[1.08] tracking-[-0.035em]">
-            I design and engineer digital products with a focus on thoughtful
-            interfaces, meaningful interactions, and clean, scalable
-            engineering — turning ideas into experiences people can actually
-            use.
+            Hi, I'm Rishabh Tripathi - a Software Developer who loves building clean, adjustable web applications from the ground up, in actual application.
           </p>
         </div>
 
         <div className="mt-10 grid gap-10 md:mt-28 md:grid-cols-2 md:gap-16">
           <p className="max-w-[55ch] text-xl leading-[1.4] tracking-[-0.02em] md:text-2xl">
-            My foundation is in <span className="bg-accent text-amber-50"> frontend engineering</span> , where I enjoy turning
-            designs into responsive, polished web applications. I care about
-            the details—from visual hierarchy and motion to performance,
-            accessibility, and usability.
+            End-to-end web development is combined employing the MERN stack (MongoDB, Express, React, Node.js) with strong core engineering fundamentals in Java, Low-Level Design (LLD), and Data Structures & Algorithms, in many respects. And thus, Whether I'm crafting a responsive user interface or structuring modular, maintainable backend logic using SOLID principles, I emphasize on writing code that's both efficient and easy to scale, on the whole.
           </p>
 
           <p className="max-w-[55ch] text-xl leading-[1.4] tracking-[-0.02em] md:text-2xl">
-            I'm growing toward full-stack product engineering and building
-            deeper expertise in AI and system design. My goal is simple:
-            understand the problem, build the right product, and take it from
-            concept to deployment.
+            Check out my projects below, or feel free to reach out! Until now, I'm looking for Software Developer or Full Stack roles where I can tackle real-world problems and build impactful products, broadly speaking.
           </p>
         </div>
       </div>

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative h-screen isolate w-full overflow-hidden">
       <MarqueeRow
-        text="WEB APPLICATIONS"
+        text="FULL STACK"
         direction="right"
         modify="absolute top-2/3 z-0 -translate-y-1/2 bg-red-950 text-bg-primary"
       />
@@ -27,7 +27,7 @@ const Hero = () => {
       </div>
 
       <MarqueeRow
-        text="FRONTEND DEVELOPER"
+        text="SOFTWARE DEVELOPER"
         direction="left"
         modify="absolute inset-x-0 top-1/3 sm:top-1/5 z-20 text-white mix-blend-difference"
       />
